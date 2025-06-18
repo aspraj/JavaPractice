@@ -1,0 +1,156 @@
+public class Person {
+
+    private String firstName;
+    private String lastName;
+    private int age;
+
+    public boolean isTeen() {
+        return age > 12 && age < 20;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+
+        if (age < 0 || age > 100) {
+            this.age = 0;
+        } else {
+            this.age = age;
+        }
+    }
+
+    public String getFullName() {
+
+        if (firstName.isEmpty() && lastName.isEmpty()) {
+            return "";
+        }
+
+        if (firstName.isEmpty()) {
+            return lastName;
+        }
+
+        if (lastName.isEmpty()) {
+            return firstName;
+        }
+
+        return firstName + " " + lastName;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Person {
+
+    // Instance variables
+    private String firstName;
+    private String lastName;
+    private int age;
+
+    // Method to get the first name
+    public String getFirstName() {
+        return firstName;
+    }
+
+    // Method to get the last name
+    public String getLastName() {
+        return lastName;
+    }
+
+    // Method to get the age
+    public int getAge() {
+        return age;
+    }
+
+    // Method to set the first name
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    // Method to set the last name
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    // Method to set the age, with validation for age range
+    public void setAge(int age) {
+        if (age < 0 || age > 100) {
+            this.age = 0;  // Set age to 0 if it's out of the valid range
+        } else {
+            this.age = age;
+        }
+    }
+
+    // Method to check if the person is a teenager
+    public boolean isTeen() {
+        return age > 12 && age < 20;  // Returns true if age is between 13 and 19
+    }
+
+    // Method to get the full name
+    public String getFullName() {
+        if (firstName.isEmpty() && lastName.isEmpty()) {
+            return "";  // If both names are empty, return an empty string
+        } else if (firstName.isEmpty()) {
+            return lastName;  // If only firstName is empty, return lastName
+        } else if (lastName.isEmpty()) {
+            return firstName;  // If only lastName is empty, return firstName
+        }
+        return firstName + " " + lastName;  // Return full name if both are non-empty
+    }
+}
+
+
+
